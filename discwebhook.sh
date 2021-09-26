@@ -1,3 +1,4 @@
+#!/bin/bash
 scriptname='discwebhook'
 CONFIGDIR=${CONFIGDIR:-"$HOME/.$scriptname"};
 
