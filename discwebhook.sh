@@ -179,6 +179,7 @@ draw() {
 		echo "3) Change avatar URL";
 		echo "4) Update webhook URL";
 		echo "5) Manage webhooks";
+		echo "";
 		echo "q) Quit";
 		echo "";
 		echo "Username: $username";
@@ -230,15 +231,17 @@ draw() {
 		echo "Webhook: $curWebhook";
 		echo "";
 
-		for webhook_index in "${!webhooks[@]}"; do # iterate webhooks
-			echo """$(($webhook_index + 1))"") Use webhook '""${webhooks[$webhook_index]}""'";
-		done
-
 		echo "a) Add webhook";
 		echo "l) Load webhook from config folder";
 		echo "d) Delete webhook";
 		echo "r) Rename webhook";
 		echo "q) Go back to main menu";
+		echo "";
+
+		for webhook_index in "${!webhooks[@]}"; do # iterate webhooks
+			echo """$(($webhook_index + 1))"") Use webhook '""${webhooks[$webhook_index]}""'";
+		done
+
 		echo "";
 		;;
 
